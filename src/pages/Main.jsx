@@ -1,27 +1,27 @@
 import React, { useState, useEffect } from "react";
 import ReactDOM from "react-dom";
-import axios from "axios";
-import Pokemon from "../components/pokemon.component";
+import Pokemon from "../components/Pokemon";
 import {
   fetchPokemon,
   fetchPokemonByUrl,
   fetchPokemonByName,
 } from "../api/requests";
+import PokemonModal from "../components/PokemonModal";
+import { usePokemon } from "../context/PokemonContext";
 
 function Main() {
   const [pokemonList, setPokemonList] = useState([]);
   const [loading, setLoading] = useState(true);
   const [nextUrl, setNextUrl] = useState("");
   const [prevUrl, setPrevUrl] = useState("");
-
-
+  const { clicked, setClicked } = usePokemon();
 
   useEffect(() => {
     async function fetchInitialData() {
       const { next, previous, results } = await fetchPokemon();
       setNextUrl(next);
       setPrevUrl(previous);
-      setPokemonList( await Promise.all(
+      setPokemonList(await Promise.all(
         results.map((pokemon) => {
           return fetchPokemonByName(pokemon.name);
         })
@@ -39,7 +39,7 @@ function Main() {
     setNextUrl(next);
     setPrevUrl(previous);
     setLoading(false);
-    setPokemonList( await Promise.all(
+    setPokemonList(await Promise.all(
       results.map((pokemon) => {
         return fetchPokemonByName(pokemon.name);
       })
@@ -60,19 +60,20 @@ function Main() {
       })
     ))
   };
+
   return (
     <>
       {pokemonList.length > 0 ? (
         pokemonList.map((pokemon) => (
           <Pokemon
             id={pokemon.id}
-            name={pokemon.name}
+            name={pokemon.name} P
             sprite={pokemon.sprites.front_default}
           />
         ))
       ) : (
-        <p>Loading...</p>
-      )}
+          <p>Loading...</p>
+        )}
       <button onClick={prev}>Prev</button>
       <button onClick={next}>Next</button>
     </>
