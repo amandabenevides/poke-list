@@ -9,19 +9,10 @@
 
 .App-header {
   background: #7aa1d2; /* fallback for old browsers */
-  background: -webkit-linear-gradient(
-    to left,
-    #7aa1d2,
-    #dbd4b4,
-    #7aa1d2
-  ); /* Chrome 10-25, Safari 5.1-6 */
-  background: linear-gradient(
-    to left,
-    #7aa1d2,
-    #dbd4b4,
-    #7aa1d2
-  ); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
-
+  background: -webkit-linear-gradient(to left, #7aa1d2, #dbd4b4, #7aa1d2);
+  /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(to left, #7aa1d2, #dbd4b4, #7aa1d2);
+  /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
   min-height: 100vh;
   display: flex;
   flex-direction: column;
@@ -32,17 +23,47 @@
   width: 100%;
 }
 
-input, button, select, optgroup, textarea {
+input,
+button,
+select,
+optgroup,
+textarea {
   font-size: initial !important;
-
 }
 
 /*Navbar*/
 
-.nav-wrap{
+.nav-wrap {
   width: 100%;
 }
 
-.nav-poke{
-  background-color: rgba(255,255,255, 0.5) !important;
+.nav-poke {
+  background-color: rgba(255, 255, 255, 0.5) !important;
+}
+
+/*Buttons*/
+
+.button-wrap {
+  display: block !important;
+}
+
+button:focus {
+  outline: none !important;
+}
+
+.top-button {
+  width: 6em;
+  border-radius: 10px;
+  border: 2px #7ca2d2;
+  border-style: solid;
+  padding: 0.2em;
+  background: #ffff;
+  font-weight: bold;
+  transition: all 0.2s;
+  margin-right: 4px;
+  margin-top: 0.5em;
+}
+
+.top-button:hover {
+  background: #5a8bcd;
 }

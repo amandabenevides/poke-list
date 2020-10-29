@@ -1,20 +1,4 @@
-/* Pokemon Item Style */
-
-.top-button {
-  width: 20%;
-  border-radius: 10px;
-  border: 2px #7ca2d2;
-  border-style: solid;
-  padding: 0.2em;
-  background: #ffff;
-  font-weight: bold;
-  transition: all 0.2s;
-  margin-right: 4px;
-}
-
-.top-button:hover {
-  background: #5a8bcd;
-}
+/* Pokemon Card Style */
 
 .container {
   width: 80%;
@@ -80,4 +64,27 @@
 
 .foot-card button:hover {
   background: #5a8bcd;
+}
+
+/*Columns : Overwriting Bootstrap's default styles*/
+
+.row {
+  display: flex;
+  flex-wrap: wrap;
+  margin-right: -15px !important;
+  margin-left: -20px !important;
+}
+
+@media (min-width: 1200px) {
+  .row {
+    margin-right: -15px !important;
+    margin-left: 15px !important;
+  }
+}
+
+@media (min-width: 351px) and (max-width: 767px) {
+  .row {
+    margin-right: 0px !important;
+    margin-left: 3em !important;
+  }
 }

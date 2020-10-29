@@ -17,7 +17,12 @@ function Main() {
   const [nextUrl, setNextUrl] = useState("");
   const [prevUrl, setPrevUrl] = useState("");
   const { clicked, setClicked } = usePokemon();
+  const { search, setSearch } = usePokemon();
 
+//   let filteredPokemons= pokemonList.filter(item => {
+    
+//    item.name.includes(search.toLowerCase())
+// })
 
   useEffect(() => {
     async function fetchInitialData() {
@@ -70,23 +75,30 @@ function Main() {
   return (
     <>
       <PokemonModal selectedPokemon={selectedPokemon} />
+      <div className="button-wrap">
       <button className="top-button" onClick={prev}>Prev</button>
       <button className="top-button" onClick={next}>Next</button>
-      {pokemonList.length > 0 ? (
-        pokemonList.map((pokemon) => (
+      </div>
+      <Container>
+        <Row xs="auto">
+          {pokemonList.length > 0 ? (
+            pokemonList.map((pokemon) => (
+            
+              <Pokemon
+                pokemonProfile={pokemon}
+                onClick={handleClick}
+                id={pokemon.id}
+                name={pokemon.name}
+                sprite={pokemon.sprites.front_default}
+                type={pokemon.types[0].type.name}
+              />))
 
-          <Pokemon
-            pokemonProfile={pokemon}
-            onClick={handleClick}
-            id={pokemon.id}
-            name={pokemon.name}
-            sprite={pokemon.sprites.front_default}
-            type={pokemon.types[0].type.name}
-          />
-        )))
-        : (
-          <p>Loading...</p>
-        )}
+              )
+            : (
+              <p>Loading...</p>
+            )}
+        </Row>
+      </Container>
     </>
   );
 }

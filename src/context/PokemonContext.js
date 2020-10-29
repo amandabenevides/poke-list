@@ -4,6 +4,7 @@ const PokemonContext = createContext();
 
 export default function PokemonProvider({ children }) {
     const [clicked, setClicked] = useState(0);
+    const [search, setSearch] = useState('');
 
     return (
         <PokemonContext.Provider
@@ -15,6 +16,6 @@ export default function PokemonProvider({ children }) {
 
 export function usePokemon() {
     const context = useContext(PokemonContext);
-    const { clicked, setClicked } = context;
-    return { clicked, setClicked };
+    const { clicked, setClicked, search, setSearch } = context;
+    return { clicked, setClicked, search, setSearch };
 }
