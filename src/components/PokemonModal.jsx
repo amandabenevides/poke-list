@@ -6,22 +6,18 @@ const PokemonModal = (props) => {
     const {
         className
     } = props;
+    console.log("props", props)
+    console.log("props", props.PokemonProfile )
 
     const { clicked, setClicked } = usePokemon();
-
     const toggle = () => setClicked(!clicked);
 
     return (
         <div>
             <Modal isOpen={clicked} toggle={toggle} className={className}>
-                <ModalHeader toggle={toggle}>Modal title</ModalHeader>
+                <ModalHeader toggle={toggle}>bulbasaur</ModalHeader>
                 <ModalBody>
-                    Lorem ipsum dolor sit amet, consectetur adipisicing elit, ,
-                    sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim venia
-                    m, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis
-                    aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla p
-                    ariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deser
-                    unt mollit anim id est laborum.
+                    Pokemon abilities!
         </ModalBody>
                 <ModalFooter>
                     <Button color="secondary" onClick={toggle}>Close</Button>

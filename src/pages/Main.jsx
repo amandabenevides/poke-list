@@ -8,13 +8,16 @@ import {
 } from "../api/requests";
 import PokemonModal from "../components/PokemonModal";
 import { usePokemon } from "../context/PokemonContext";
+import { Container, Row, Col } from 'reactstrap';
 
 function Main() {
   const [pokemonList, setPokemonList] = useState([]);
+  const [selectedPokemon, setSelectedPokemon] = useState({});
   const [loading, setLoading] = useState(true);
   const [nextUrl, setNextUrl] = useState("");
   const [prevUrl, setPrevUrl] = useState("");
   const { clicked, setClicked } = usePokemon();
+
 
   useEffect(() => {
     async function fetchInitialData() {
@@ -60,22 +63,30 @@ function Main() {
       })
     ))
   };
-
+  const handleClick = (pokemon) => {
+    setSelectedPokemon(pokemon);
+    setClicked(true);
+  }
   return (
     <>
+      <PokemonModal selectedPokemon={selectedPokemon} />
+      <button className="top-button" onClick={prev}>Prev</button>
+      <button className="top-button" onClick={next}>Next</button>
       {pokemonList.length > 0 ? (
         pokemonList.map((pokemon) => (
+
           <Pokemon
+            pokemonProfile={pokemon}
+            onClick={handleClick}
             id={pokemon.id}
-            name={pokemon.name} P
+            name={pokemon.name}
             sprite={pokemon.sprites.front_default}
+            type={pokemon.types[0].type.name}
           />
-        ))
-      ) : (
+        )))
+        : (
           <p>Loading...</p>
         )}
-      <button onClick={prev}>Prev</button>
-      <button onClick={next}>Next</button>
     </>
   );
 }
