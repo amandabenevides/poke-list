@@ -1,0 +1,25 @@
+{
+  "files": {
+    "main.css": "/amandabenevides/poke-list/static/css/main.33962e36.chunk.css",
+    "main.js": "/amandabenevides/poke-list/static/js/main.011e44d3.chunk.js",
+    "main.js.map": "/amandabenevides/poke-list/static/js/main.011e44d3.chunk.js.map",
+    "runtime-main.js": "/amandabenevides/poke-list/static/js/runtime-main.730e0313.js",
+    "runtime-main.js.map": "/amandabenevides/poke-list/static/js/runtime-main.730e0313.js.map",
+    "static/css/2.6414bb7b.chunk.css": "/amandabenevides/poke-list/static/css/2.6414bb7b.chunk.css",
+    "static/js/2.4c524ffb.chunk.js": "/amandabenevides/poke-list/static/js/2.4c524ffb.chunk.js",
+    "static/js/2.4c524ffb.chunk.js.map": "/amandabenevides/poke-list/static/js/2.4c524ffb.chunk.js.map",
+    "index.html": "/amandabenevides/poke-list/index.html",
+    "precache-manifest.affe07a5e07fcfed97f552d0a35cad1b.js": "/amandabenevides/poke-list/precache-manifest.affe07a5e07fcfed97f552d0a35cad1b.js",
+    "service-worker.js": "/amandabenevides/poke-list/service-worker.js",
+    "static/css/2.6414bb7b.chunk.css.map": "/amandabenevides/poke-list/static/css/2.6414bb7b.chunk.css.map",
+    "static/css/main.33962e36.chunk.css.map": "/amandabenevides/poke-list/static/css/main.33962e36.chunk.css.map",
+    "static/js/2.4c524ffb.chunk.js.LICENSE.txt": "/amandabenevides/poke-list/static/js/2.4c524ffb.chunk.js.LICENSE.txt"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.730e0313.js",
+    "static/css/2.6414bb7b.chunk.css",
+    "static/js/2.4c524ffb.chunk.js",
+    "static/css/main.33962e36.chunk.css",
+    "static/js/main.011e44d3.chunk.js"
+  ]
+}
