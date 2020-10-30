@@ -1,5 +1,6 @@
-
-![](https://github.com/amandabenevides/poke-list/blob/main/src/assets/logo.png?raw=true)
+<p align="center">
+  <img src="https://github.com/amandabenevides/poke-list/blob/main/src/assets/logo.png?raw=true)">
+</p>
 
 ## 💻 Project
 
