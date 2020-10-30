@@ -1,8 +1,8 @@
 import React from 'react';
-import './App.css';
+import './global.css';
 import Main from './pages/Main.jsx';
 import PokemonProvider from './context/PokemonContext';
-import PokemonNavbar from './components/PokemonNavbar';
+import PokemonNavbar from './components/PokemonNavbar/PokemonNavbar';
 
 function App() {
   return (

@@ -1,0 +1,30 @@
+/*Navbar*/
+
+.nav-wrap {
+  width: 100%;
+  position: sticky !important;
+}
+
+.nav-poke {
+  background-color: rgba(255, 255, 255, 0.5) !important;
+}
+
+/*Search bar*/
+.search-poke-bar {
+  border-radius: 5px;
+  border: #ffff;
+}
+
+.search-poke-bar::-webkit-input-placeholder {
+  /* Edge */
+  color: #5a8bcd;
+}
+
+.search-poke-bar:-ms-input-placeholder {
+  /* Internet Explorer 10-11 */
+  color: #5a8bcd;
+}
+
+.search-poke-bar::placeholder {
+  color: #5a8bcd;
+}

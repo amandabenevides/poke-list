@@ -1,0 +1,13 @@
+/*Modal : Overwriting Bootstrap's default styles*/
+.modal-body {
+    color: rgb(142, 142, 143);
+  }
+  
+  ul {
+    list-style-type: none;
+  }
+  
+  .btn-secondary {
+    background-color: #3563ad !important;
+    border-color: #3563ad !important;
+  }

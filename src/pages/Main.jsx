@@ -1,23 +1,26 @@
 import React, { useState, useEffect } from "react";
-import Pokemon from "../components/Pokemon";
+import Pokemon from "../components/Pokemon/Pokemon";
 import {
   fetchPokemon,
   fetchPokemonByUrl,
   fetchPokemonByName,
 } from "../api/requests";
-import PokemonModal from "../components/PokemonModal";
+import PokemonModal from "../components/PokemonModal/PokemonModal";
 import { usePokemon } from "../context/PokemonContext";
 import { Container, Row } from 'reactstrap';
 import { Spinner } from 'reactstrap';
 
 function Main() {
-  const [pokemonList, setPokemonList] = useState([]);
-  const [selectedPokemon, setSelectedPokemon] = useState({});
-  const [nextUrl, setNextUrl] = useState("");
-  const [prevUrl, setPrevUrl] = useState("");
-  const { setClicked } = usePokemon();
-  const { search, setSearch } = usePokemon();
-  const [filteredPokemons, setFilteredPokemons] = useState([]);
+
+  const [pokemonList, setPokemonList] = useState([]); //State to set the Pokemon list after the API call
+  const [selectedPokemon, setSelectedPokemon] = useState({}); // Sets the selected Pokemon once the +info button is clicked
+  const [nextUrl, setNextUrl] = useState(""); // Sets the next url for the current list
+  const [prevUrl, setPrevUrl] = useState(""); // Sets the previous url for the current list
+  const { setClicked } = usePokemon(); // Context to share the clicked property to trigger the modal render
+  const { search } = usePokemon(); // Context to share the input from the navbar search bar
+  const [filteredPokemons, setFilteredPokemons] = useState([]); // State to set the filtered Pokemons, according to the search bar input
+
+  // Api calls to set current, previous and next pages.
 
   useEffect(() => {
     async function fetchInitialData() {
@@ -64,6 +67,7 @@ function Main() {
     setClicked(true);
   }
 
+  // Returns a new filtered Pokemon list according to the user input on the searchbar
   useEffect(() => {
     setFilteredPokemons(
       pokemonList.filter(pokemon => {
@@ -72,19 +76,16 @@ function Main() {
     )
   }, [search, pokemonList]);
 
-  console.log('busca',search);
-  
   return (
     <>
       <PokemonModal selectedPokemon={selectedPokemon} />
-      <div className="button-wrap">{search}
+      <div className="button-wrap">
         <button className="top-button" onClick={prev}>Prev</button>
         <button className="top-button" onClick={next}>Next</button>
       </div>
       <Container>
         <Row xs="auto">
           {pokemonList.length > 0 ? (
-            // pokemonList.map((pokemon) => (
             filteredPokemons.map((pokemon) => (
               <Pokemon key={pokemon.id}
                 pokemonProfile={pokemon}

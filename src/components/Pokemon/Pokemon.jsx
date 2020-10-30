@@ -1,5 +1,5 @@
 import React from 'react';
-import '../components/Pokemon.css';
+import '../Pokemon/Pokemon.css';
 
 // Pokémon card
 

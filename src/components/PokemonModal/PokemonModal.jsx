@@ -1,6 +1,7 @@
 import React from 'react';
 import { Button, Modal, ModalHeader, ModalBody, ModalFooter } from 'reactstrap';
-import { usePokemon } from "../context/PokemonContext";
+import { usePokemon } from '../../context/PokemonContext';
+import '../PokemonModal/PokemonModal.css';
 
 // Pokémon modal - shows stats per each Pokémon, once its clicked 
 

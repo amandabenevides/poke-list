@@ -2,11 +2,11 @@
   <img src="https://github.com/amandabenevides/poke-list/blob/main/src/assets/logo.png?raw=true)">
 </p>
 
-## 💻 Project
+## 💻 Project 
 
 ReactJS application using Hooks and Context API.
 
-## 🧰 Tools and Assets
+## 🧰 Tools and Assets 
 
 - [Bootstrap (reactstrap)](https://reactstrap.github.io/)
 
