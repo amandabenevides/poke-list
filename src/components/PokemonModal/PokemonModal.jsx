@@ -6,13 +6,8 @@ import '../PokemonModal/PokemonModal.css';
 // Pokémon modal - shows stats per each Pokémon, once its clicked 
 
 const PokemonModal = (props) => {
-    const { className } = props;
-    console.log("props", props)
-    console.log("props", props.PokemonProfile)
-    console.log(className);
-    const mapping = props.selectedPokemon.abilities;
-    console.log('mapping', mapping);
 
+    const { className } = props;
     const { clicked, setClicked } = usePokemon();
     const toggle = () => setClicked(!clicked);
 
@@ -26,8 +21,6 @@ const PokemonModal = (props) => {
                         <li>Height: {props.selectedPokemon.height}</li>
                         <li>Weight: {props.selectedPokemon.weight}</li>
                     </ul>
-                    {console.log('selected', props.selectedPokemon, 'name', 'acbilitiesss', props.selectedPokemon.abilities)}
-                    {/* Abilities: {props.selectedPokemon.abilities[0].ability.name} */}
                 </ModalBody>
                 <ModalFooter>
                     <Button color="secondary" onClick={toggle}>Close</Button>

@@ -68,6 +68,7 @@ function Main() {
   }
 
   // Returns a new filtered Pokemon list according to the user input on the searchbar
+
   useEffect(() => {
     setFilteredPokemons(
       pokemonList.filter(pokemon => {
