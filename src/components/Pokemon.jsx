@@ -1,10 +1,11 @@
-import React, { useState, useCallback } from 'react';
-import { usePokemon } from "../context/PokemonContext";
+import React from 'react';
 import '../components/Pokemon.css';
-import PokemonModal from "../components/PokemonModal";
+
+// Pokémon card
 
 export default ({ id, name, sprite, type, onClick, pokemonProfile }) => {
-  const { clicked, setClicked } = usePokemon();
+
+  // Passing id when the Pokémon's info button is clicked 
 
   function handleClick(id) {
     onClick(pokemonProfile);
@@ -12,16 +13,16 @@ export default ({ id, name, sprite, type, onClick, pokemonProfile }) => {
   return (
     <>
       <div className="pokemon-item">
-        <div class="container">
-          <div class="card-poke">
+        <div className="container">
+          <div className="card-poke">
             <div>
-              <div class="name">#{id} {name}</div>
-              <div class="type">
+              <div className="name">#{id} {name}</div>
+              <div className="type">
                 <span>{type}</span>
               </div>
-              <div class="img"><img src={sprite}></img></div>
+              <div className="img"><img src={sprite} alt="Pokémon Sprite"></img></div>
             </div>
-            <div class="foot-card">
+            <div className="foot-card">
               <button onClick={() => handleClick(id)} >+ info</button>
             </div>
           </div>

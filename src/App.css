@@ -17,7 +17,6 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: center;
   font-size: calc(10px + 2vmin);
   color: white;
   width: 100%;
@@ -31,10 +30,15 @@ textarea {
   font-size: initial !important;
 }
 
+:focus {
+  outline: none !important;
+}
+
 /*Navbar*/
 
 .nav-wrap {
   width: 100%;
+  position: sticky !important;
 }
 
 .nav-poke {
@@ -45,10 +49,6 @@ textarea {
 
 .button-wrap {
   display: block !important;
-}
-
-button:focus {
-  outline: none !important;
 }
 
 .top-button {
@@ -66,4 +66,24 @@ button:focus {
 
 .top-button:hover {
   background: #5a8bcd;
+}
+
+/*Search bar*/
+.search-poke-bar {
+  border-radius: 5px;
+  border: #ffff;
+}
+
+.search-poke-bar::-webkit-input-placeholder {
+  /* Edge */
+  color: #5a8bcd;
+}
+
+.search-poke-bar:-ms-input-placeholder {
+  /* Internet Explorer 10-11 */
+  color: #5a8bcd;
+}
+
+.search-poke-bar::placeholder {
+  color: #5a8bcd;
 }

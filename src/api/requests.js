@@ -1,12 +1,13 @@
 import axios from 'axios';
 
+//PokeApi request calls
 
-export const fetchPokemon = async() => {
-    const { data } = await axios.get("https://pokeapi.co/api/v2/pokemon/?limit=20");
+export const fetchPokemon = async () => {
+    const { data } = await axios.get("https://pokeapi.co/api/v2/pokemon/?limit=153");
     return data;
 }
 
-export const fetchPokemonByUrl = async(url) => {
+export const fetchPokemonByUrl = async (url) => {
     return await axios.get(url);
 }
 

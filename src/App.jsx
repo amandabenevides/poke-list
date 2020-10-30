@@ -8,10 +8,10 @@ function App() {
   return (
     <div className="App">
       <header className="App-header">
-      <PokemonProvider>
-        <PokemonNavbar />
-        <Main />
-      </PokemonProvider>
+        <PokemonProvider>
+          <PokemonNavbar />
+          <Main />
+        </PokemonProvider>
       </header>
     </div>
   );

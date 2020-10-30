@@ -1,5 +1,7 @@
 import React, { createContext, useState, useContext } from 'react';
 
+// Creating context to share properties between Header and Main components
+
 const PokemonContext = createContext();
 
 export default function PokemonProvider({ children }) {
@@ -8,7 +10,7 @@ export default function PokemonProvider({ children }) {
 
     return (
         <PokemonContext.Provider
-            value={{ clicked, setClicked }}>
+            value={{ clicked, setClicked, search, setSearch }}>
             {children}
         </PokemonContext.Provider>
     );

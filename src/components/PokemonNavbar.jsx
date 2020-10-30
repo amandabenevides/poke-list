@@ -5,12 +5,6 @@ import {
   NavbarToggler,
   NavbarBrand,
   Nav,
-  NavItem,
-  NavLink,
-  UncontrolledDropdown,
-  DropdownToggle,
-  DropdownMenu,
-  DropdownItem,
   NavbarText
 } from 'reactstrap';
 import 'bootstrap/dist/css/bootstrap.css';
@@ -25,15 +19,16 @@ const PokemonNavbar = (props) => {
     <div className="nav-wrap">
       <Navbar className="nav-poke" light expand="md">
         <NavbarBrand href="/">
-          <img src={logo} />
+          <img src={logo} alt="PokéCards Logo"/>
         </NavbarBrand>
         <NavbarToggler onClick={toggle} />
         <Collapse isOpen={isOpen} navbar>
           <Nav className="mr-auto" navbar>
           </Nav>
           <NavbarText>
-          <input className="search-poke-bar" type="text" placeholder="search" onChange={e => setSearch(e.target.value)} />              
-            </NavbarText>
+            {search}
+            <input className="search-poke-bar" type="text" placeholder="search" onChange={e => setSearch(e.target.value)} />
+          </NavbarText>
         </Collapse>
       </Navbar>
     </div>
