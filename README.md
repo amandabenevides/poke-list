@@ -12,9 +12,13 @@ ReactJS application using Hooks and Context API.
 
 - [PokeApi](https://github.com/PokeAPI)
 
-## 🌠 How to run
+## 💫 How to run
 
 ### `npm install`
 to download the dependencies;
 ### `npm start`
 to run the project.
+
+## 🚀 How to access
+
+- [Project Build](https://amandabenevides.github.io/poke-list)
